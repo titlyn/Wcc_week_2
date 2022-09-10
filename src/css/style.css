@@ -291,8 +291,8 @@ header #profil {
 }
 
 #left .left_cards .left_card {
-    margin-right: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -312,8 +312,8 @@ header #profil {
 }
 
 
-/* Small devices (portrait tablets and large phones, 440px and up) */
-@media only screen and (min-width: 440px) {
+/* Small devices (portrait tablets and large phones, 500px and up) */
+@media only screen and (min-width: 500px) {
     html {
         /* background-color: rgba(255, 0, 0, 0.534); */
     }
@@ -330,11 +330,14 @@ header #profil {
     #illustrImgContainer {
         width: 60%;
         align-self: flex-start;
+        margin-left: 5%;
     }
-
-
+    
+    
     #details {
+        width: 30%;
         margin-left: 20px;
+        margin-right: 5%;
     }
 
     #details h2 {
@@ -342,14 +345,14 @@ header #profil {
     }
 
     #right {
-        /* border: 2px solid green; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    html {
-        background-color: red;
+    .right_cards{
+        align-self: center;
+        width: 60%;
     }
 }
 
