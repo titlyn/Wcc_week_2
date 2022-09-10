@@ -7,7 +7,7 @@
 html, body{
     color: var(--darkViolet);
     margin: 0;
-    paddin: 0;
+    padding: 0;
     width: 100%;
     overlfow: hidden;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -191,6 +191,17 @@ header #profil{
     width:100%;
 }
 
+#right .right_cards .riht_card .threeimg {
+    display: flex;
+    padding: 20px;
+}
+
+#right .right_cards .riht_card .threeimg img{
+    display: flex;
+    padding: 20px;
+    width: 200px;
+}
+
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
     html{
@@ -211,3 +222,33 @@ header #profil{
  @media only screen and (min-width: 1200px) {
 
  } 
+
+ @media only screen and (max-width: 600px) {
+    html {
+        background-color: ghostwhite;
+    }
+
+    #main #left .left_cards {
+        display: flex;
+    }
+
+    #main #left .left_cards .left_card .left_icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    #main #right .right_cards .right_card .right_icon{
+        height: 50px;
+        width: 50px;
+    }
+
+    #main #right .right_cards .right_card{
+        display: flex;
+    }
+
+    #main #right .right_cards .right_card .threeimg img{
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+    }
+ }
