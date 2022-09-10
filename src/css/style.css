@@ -76,6 +76,7 @@ header #profil{
 }
 
 #minifiedProfil .name{
+    /* display: none; */
     margin-right: 5px;
     color: var(--darkViolet);
     text-decoration: underline;
