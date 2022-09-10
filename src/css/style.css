@@ -33,7 +33,7 @@ header{
     padding: 10px;
     display: flex;
     flex-direction: row;
-    box-shadow: 3px 3px 15px rgba(102, 51, 153, 0.671);
+    box-shadow: 1px 1px 5px rgba(102, 51, 153, 0.671);
 }
 
 header #textLogo, #profil{
@@ -91,10 +91,11 @@ header #profil{
 
 #hiddenOnSmallProfil{
     display: flex;
+    display: none;
+    z-index: 1000;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    display: none;
     background-color: var(--dark);
     color: white;
     align-self: flex-end;
@@ -165,25 +166,23 @@ header #profil{
 .classe{
     padding: 11px 2vw;
     border-radius: 8px;
-    font-weight: 600;
 }
 
 .classe:nth-of-type(2){
     color: ghostwhite;
     background-color: var(--yellowOrange);
     box-shadow: 2px 2px 3px rgb(235, 156, 0);
-    margin: autp 5px;
+    margin: auto 10px;
 }
 
 #illustration{
     display: flex;
     flex-direction: column;
     padding-top: 30px;
-    border: 2px solid red
 }
 
 #illustrImgContainer{
-    width: 90%;
+    width: 100%;
     align-self: center;
 }
 
