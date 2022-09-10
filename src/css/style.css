@@ -157,7 +157,7 @@ header #profil {
     margin-top: 20px;
 }
 
-#left {
+#left, #right {
     padding: 10px;
 }
 
@@ -207,25 +207,25 @@ header #profil {
     display: flex;
 }
 
-#main #left .left_cards .left_card .left_icon,
-#main #right .right_cards .right_card .right_icon {
+#left .left_cards .left_card .left_icon,
+#right .right_cards .right_card .right_icon {
     height: 50px;
     width: 50px;
 }
 
-#main #right .right_cards .right_card {
+#right .right_cards .right_card {
     display: flex;
 }
 
-#main #right .right_cards .right_card .threeimg{
+#right .right_cards .right_card .threeimg {
     margin-left: 200px;
 }
 
-#main #right .right_cards .right_card .description{
+#right .right_cards .right_card .description {
     margin-left: 50px;
 }
 
-#main #right .right_cards .right_card .threeimg img{
+#right .right_cards .right_card .threeimg img {
     border: 2px solid ghostwhite;
     margin-left: -30px;
     border-radius: 50%;
@@ -233,14 +233,14 @@ header #profil {
     width: 40px;
 }
 
-#main #right .right_cards .right_card .dots {
+#right .right_cards .right_card .dots {
     justify-content: center;
     align-items: center;
     margin-left: 10px;
     margin-top: 15px;
 }
 
-#main #right .right_cards .right_card .dots div {
+#right .right_cards .right_card .dots div {
     height: 5px;
     width: 5px;
     background-color: gray;
@@ -248,11 +248,11 @@ header #profil {
     border-radius: 50%;
 }
 
-#right .foot p{
+#right .foot p {
     color: gray;
 }
 
-#right .foot .icons img{
+#right .foot .icons img {
     height: 20px;
     width: 20px;
     margin-right: 20px;
@@ -262,7 +262,7 @@ header #profil {
     margin-bottom: 50px;
 }
 
-#main #left #illustration #details a{
+#main #left #illustration #details a {
     color: rgb(255, 140, 0);
 }
 
@@ -285,30 +285,30 @@ header #profil {
     margin: 2px;
 }
 
-#main #left .left_cards {
+#left .left_cards{
     display: flex;
     justify-content: center;
 }
 
-#main #left .left_cards .left_card {
+#left .left_cards .left_card {
     margin-right: 50px;
     margin-bottom: 100px;
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
 }
 
-#main #left .left_cards .left_card .left_icon {
-    height: 50px;
-    width: 50px;
+#left .left_cards .left_card .left_icon {
+    height: 60px;
+    width: 60px;
     margin-bottom: 10px;
 }
 
-#main #left .left_cards .left_card a{
+#left .left_cards .left_card a {
     text-decoration: none;
-    margin: 0;
-    color: darkorange;
+    color: var(--yellowOrange);
 }
 
 
@@ -321,7 +321,7 @@ header #profil {
     #left {
         /* border: 2px solid cyan; */
     }
-    
+
     #illustration {
         flex-direction: row;
         justify-content: center;
@@ -332,31 +332,24 @@ header #profil {
         align-self: flex-start;
     }
 
-    
-    #details{
+
+    #details {
         margin-left: 20px;
     }
 
-    #details h2{
+    #details h2 {
         margin-top: 0;
     }
-    
+
     #right {
         /* border: 2px solid green; */
     }
 }
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
-    html{
-        background-color: red;
-    }
- }
 
- /* for mobile devices*/
- @media only screen and (max-width: 600px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
     html {
-        background-color: ghostwhite;
-        margin: 20px;
+        background-color: red;
     }
 }
 
