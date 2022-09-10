@@ -217,6 +217,101 @@ header #profil {
     display: flex;
 }
 
+#main #right .right_cards .right_card .threeimg{
+    margin-left: 200px;
+}
+
+#main #right .right_cards .right_card .description{
+    margin-left: 50px;
+}
+
+#main #right .right_cards .right_card .threeimg img{
+    border: 2px solid ghostwhite;
+    margin-left: -30px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+#main #right .right_cards .right_card .dots {
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+#main #right .right_cards .right_card .dots div {
+    height: 5px;
+    width: 5px;
+    background-color: gray;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+
+#right .foot p{
+    color: gray;
+}
+
+#right .foot .icons img{
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+}
+
+#main #left #illustration {
+    margin-bottom: 50px;
+}
+
+#main #left #illustration #details a{
+    color: rgb(255, 140, 0);
+}
+
+#main #left #illustration #threeDots {
+    display: flex;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(207, 205, 205);
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#main #left #illustration #threeDots div {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 2px;
+}
+
+#main #left .left_cards {
+    display: flex;
+    justify-content: center;
+}
+
+#main #left .left_cards .left_card {
+    margin-right: 50px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#main #left .left_cards .left_card .left_icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+#main #left .left_cards .left_card a{
+    text-decoration: none;
+    margin: 0;
+    color: darkorange;
+}
+
+
 /* Small devices (portrait tablets and large phones, 440px and up) */
 @media only screen and (min-width: 440px) {
     html {
@@ -237,6 +332,7 @@ header #profil {
         align-self: flex-start;
     }
 
+    
     #details{
         margin-left: 20px;
     }
@@ -247,6 +343,20 @@ header #profil {
     
     #right {
         /* border: 2px solid green; */
+    }
+}
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    html{
+        background-color: red;
+    }
+ }
+
+ /* for mobile devices*/
+ @media only screen and (max-width: 600px) {
+    html {
+        background-color: ghostwhite;
+        margin: 20px;
     }
 }
 
@@ -262,9 +372,3 @@ header #profil {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
-
-@media only screen and (max-width: 600px) {
-    html {
-        background-color: ghostwhite;
-    }
-}
