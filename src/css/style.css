@@ -1,4 +1,11 @@
+:root{
+    --darkViolet: rgb(42, 32, 78);
+    --dark : rgb(66, 31, 194);
+    --yellowOrange: rgb(255, 176, 7);
+}
+
 html, body{
+    color: var(--darkViolet);
     margin: 0;
     paddin: 0;
     width: 100%;
@@ -26,7 +33,7 @@ header{
     padding: 10px;
     display: flex;
     flex-direction: row;
-    box-shadow: 5px 5px 15px rgba(102, 51, 153, 0.671);
+    box-shadow: 3px 3px 15px rgba(102, 51, 153, 0.671);
 }
 
 header #textLogo, #profil{
@@ -70,6 +77,16 @@ header #profil{
 
 #minifiedProfil .name{
     margin-right: 5px;
+    color: var(--darkViolet);
+    text-decoration: underline;
+    text-decoration-color: var(--darkViolet);
+    -moz-text-decoration-color: var(--darkViolet);
+}
+
+#minifiedProfil img{
+    border-width: 4px;
+    border-style: double;
+    border-color:var(--darkViolet);
 }
 
 #hiddenOnSmallProfil{
@@ -77,8 +94,8 @@ header #profil{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    /* display: none; */
-    background-color: rgb(102, 51, 153);
+    display: none;
+    background-color: var(--dark);
     color: white;
     align-self: flex-end;
     margin-top: 10px;
@@ -86,7 +103,7 @@ header #profil{
     min-width: 200px;
     max-width: 290px;
     padding-bottom: 30px;
-    box-shadow: 6px 6px 10px rgba(102, 51, 153, 0.753);
+    box-shadow: 3px 3px 15px rgba(102, 51, 153, 0.671);
 }
 
 #hiddenOnSmallProfil .profilPic{
@@ -122,15 +139,63 @@ header #profil{
     width: 0;
     height: 0;
     position: relative;
-        bottom: 15px;
+        bottom: 14px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 15px solid rgb(102, 51, 153);
+    border-bottom: 15px solid var(--dark);
+}
+
+/* -----------MAIN----------- */
+#main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#left{
+    padding: 10px;
+}
+
+#classification{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.classe{
+    padding: 11px 2vw;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.classe:nth-of-type(2){
+    color: ghostwhite;
+    background-color: var(--yellowOrange);
+    box-shadow: 2px 2px 3px rgb(235, 156, 0);
+    margin: autp 5px;
+}
+
+#illustration{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    border: 2px solid red
+}
+
+#illustrImgContainer{
+    width: 90%;
+    align-self: center;
+}
+
+#illustrImgContainer img{
+    width:100%;
 }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
-
+    html{
+        background-color: red;
+    }
  }
  
  /* Medium devices (landscape tablets, 768px and up) */
