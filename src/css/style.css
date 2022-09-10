@@ -1,0 +1,148 @@
+html, body{
+    margin: 0;
+    paddin: 0;
+    width: 100%;
+    overlfow: hidden;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.rounded{
+    border-radius: 50%;
+}
+
+.minifiedPic{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: 100% 10%;
+    border: 2px solid white;
+}
+
+header{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 5px 15px rgba(102, 51, 153, 0.671);
+}
+
+header #textLogo, #profil{
+    height: 40px;
+}
+
+header #textLogo{
+    display: flex;
+    align-content: center;
+    width: 25%;
+    overflow: show;
+    /* border: 2px solid green; */
+}
+
+header #textLogo *{
+    margin: 0;
+    font-size: 28px;
+    align-self: center;
+}
+
+header #profil{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+#minifiedProfil, #hiddenOnSmallProfil {
+    align-self: flex-end;
+}
+
+#minifiedProfil{
+    /* display: none; */
+    text-align: right;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+#minifiedProfil *{
+    vertical-align: middle;
+}
+
+#minifiedProfil .name{
+    margin-right: 5px;
+}
+
+#hiddenOnSmallProfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* display: none; */
+    background-color: rgb(102, 51, 153);
+    color: white;
+    align-self: flex-end;
+    margin-top: 10px;
+    width: 50%;
+    min-width: 200px;
+    max-width: 290px;
+    padding-bottom: 30px;
+    box-shadow: 6px 6px 10px rgba(102, 51, 153, 0.753);
+}
+
+#hiddenOnSmallProfil .profilPic{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: 100% 10%;
+}
+
+#hiddenOnSmallProfil #edit{
+    margin: 5px auto 0 auto;
+    color: rgb(207, 207, 207);
+    font-size: smaller;
+}
+
+#hiddenOnSmallProfil .name{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+#hiddenOnSmallProfil .underName{
+    margin: 8px auto 0 auto;
+}
+
+#hiddenOnSmallProfil #mail{
+    color: rgb(207, 207, 207);
+}
+
+#hiddenOnSmallProfil::before {
+    content: "";
+    align-self: center;
+    display: block;
+    width: 0;
+    height: 0;
+    position: relative;
+        bottom: 15px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid rgb(102, 51, 153);
+}
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 
