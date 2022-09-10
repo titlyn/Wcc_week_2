@@ -1,46 +1,48 @@
-:root{
+:root {
     --darkViolet: rgb(42, 32, 78);
-    --dark : rgb(66, 31, 194);
+    --dark: rgb(66, 31, 194);
     --yellowOrange: rgb(255, 176, 7);
 }
 
-html, body{
+html,
+body {
     color: var(--darkViolet);
     margin: 0;
     padding: 0;
     width: 100%;
-    overlfow: hidden;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-.bold{
+.bold {
     font-weight: 600;
 }
 
-.rounded{
+.rounded {
     border-radius: 50%;
 }
 
-.minifiedPic{
-    width: 35px;
-    height: 35px;
+.minifiedPic {
+    width: 40px;
+    height: 40px;
     object-fit: cover;
     object-position: 100% 10%;
     border: 2px solid white;
 }
 
-header{
+header {
     padding: 10px;
     display: flex;
     flex-direction: row;
     box-shadow: 1px 1px 5px rgba(102, 51, 153, 0.671);
 }
 
-header #textLogo, #profil{
+header #textLogo,
+#profil {
     height: 40px;
 }
 
-header #textLogo{
+header #textLogo {
     display: flex;
     align-content: center;
     width: 25%;
@@ -48,34 +50,35 @@ header #textLogo{
     /* border: 2px solid green; */
 }
 
-header #textLogo *{
+header #textLogo * {
     margin: 0;
     font-size: 28px;
     align-self: center;
 }
 
-header #profil{
+header #profil {
     width: 75%;
     display: flex;
     flex-direction: column;
 }
 
-#minifiedProfil, #hiddenOnSmallProfil {
+#minifiedProfil,
+#hiddenOnSmallProfil {
     align-self: flex-end;
 }
 
-#minifiedProfil{
+#minifiedProfil {
     /* display: none; */
     text-align: right;
     padding-right: 5px;
     box-sizing: border-box;
 }
 
-#minifiedProfil *{
+#minifiedProfil * {
     vertical-align: middle;
 }
 
-#minifiedProfil .name{
+#minifiedProfil .name {
     /* display: none; */
     margin-right: 5px;
     color: var(--darkViolet);
@@ -84,13 +87,13 @@ header #profil{
     -moz-text-decoration-color: var(--darkViolet);
 }
 
-#minifiedProfil img{
+#minifiedProfil img {
     border-width: 4px;
     border-style: double;
-    border-color:var(--darkViolet);
+    border-color: var(--darkViolet);
 }
 
-#hiddenOnSmallProfil{
+#hiddenOnSmallProfil {
     display: flex;
     display: none;
     z-index: 1000;
@@ -108,29 +111,29 @@ header #profil{
     box-shadow: 3px 3px 15px rgba(102, 51, 153, 0.671);
 }
 
-#hiddenOnSmallProfil .profilPic{
+#hiddenOnSmallProfil .profilPic {
     width: 50px;
     height: 50px;
     object-fit: cover;
     object-position: 100% 10%;
 }
 
-#hiddenOnSmallProfil #edit{
+#hiddenOnSmallProfil #edit {
     margin: 5px auto 0 auto;
     color: rgb(207, 207, 207);
     font-size: smaller;
 }
 
-#hiddenOnSmallProfil .name{
+#hiddenOnSmallProfil .name {
     font-size: 24px;
     margin-bottom: 0;
 }
 
-#hiddenOnSmallProfil .underName{
+#hiddenOnSmallProfil .underName {
     margin: 8px auto 0 auto;
 }
 
-#hiddenOnSmallProfil #mail{
+#hiddenOnSmallProfil #mail {
     color: rgb(207, 207, 207);
 }
 
@@ -141,54 +144,58 @@ header #profil{
     width: 0;
     height: 0;
     position: relative;
-        bottom: 14px;
+    bottom: 14px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 15px solid var(--dark);
 }
 
 /* -----------MAIN----------- */
-#main{
+#main {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-#left{
+#left {
     padding: 10px;
 }
 
-#classification{
+#left .left_cards {
+    display: flex;
+}
+
+#classification {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.classe{
+.classe {
     padding: 11px 2vw;
     border-radius: 8px;
 }
 
-.classe:nth-of-type(2){
+.classe:nth-of-type(2) {
     color: ghostwhite;
     background-color: var(--yellowOrange);
     box-shadow: 2px 2px 3px rgb(235, 156, 0);
     margin: auto 10px;
 }
 
-#illustration{
+#illustration {
     display: flex;
     flex-direction: column;
     padding-top: 30px;
 }
 
-#illustrImgContainer{
+#illustrImgContainer {
     width: 100%;
     align-self: center;
 }
 
-#illustrImgContainer img{
-    width:100%;
+#illustrImgContainer img {
+    width: 100%;
 }
 
 #right .right_cards .riht_card .threeimg {
@@ -196,59 +203,68 @@ header #profil{
     padding: 20px;
 }
 
-#right .right_cards .riht_card .threeimg img{
+#right .right_cards .riht_card .threeimg img {
     display: flex;
-    padding: 20px;
-    width: 200px;
 }
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
-    html{
-        background-color: red;
+#main #left .left_cards .left_card .left_icon,
+#main #right .right_cards .right_card .right_icon {
+    height: 50px;
+    width: 50px;
+}
+
+#main #right .right_cards .right_card {
+    display: flex;
+}
+
+/* Small devices (portrait tablets and large phones, 440px and up) */
+@media only screen and (min-width: 440px) {
+    html {
+        /* background-color: rgba(255, 0, 0, 0.534); */
     }
- }
- 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
 
- }
- 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
- }
- 
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
+    #left {
+        /* border: 2px solid cyan; */
+    }
+    
+    #illustration {
+        flex-direction: row;
+        justify-content: center;
+    }
 
- } 
+    #illustrImgContainer {
+        width: 60%;
+        align-self: flex-start;
+    }
 
- @media only screen and (max-width: 600px) {
+    #details{
+        margin-left: 20px;
+    }
+
+    #details h2{
+        margin-top: 0;
+    }
+    
+    #right {
+        /* border: 2px solid green; */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    html {
+        background-color: rgba(0, 255, 98, 0.534);
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (max-width: 600px) {
     html {
         background-color: ghostwhite;
     }
-
-    #main #left .left_cards {
-        display: flex;
-    }
-
-    #main #left .left_cards .left_card .left_icon {
-        height: 50px;
-        width: 50px;
-    }
-
-    #main #right .right_cards .right_card .right_icon{
-        height: 50px;
-        width: 50px;
-    }
-
-    #main #right .right_cards .right_card{
-        display: flex;
-    }
-
-    #main #right .right_cards .right_card .threeimg img{
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-    }
- }
+}
