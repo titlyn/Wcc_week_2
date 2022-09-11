@@ -4,14 +4,18 @@
     --yellowOrange: rgb(255, 176, 7);
 }
 
-html,
 body {
     color: var(--darkViolet);
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    background: url(../image/waveback.svg) no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
 }
 
 .bold {
@@ -23,8 +27,8 @@ body {
 }
 
 .minifiedPic {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     object-fit: cover;
     object-position: 100% 10%;
     border: 2px solid white;
@@ -34,7 +38,8 @@ header {
     padding: 10px;
     display: flex;
     flex-direction: row;
-    box-shadow: 1px 1px 5px rgba(102, 51, 153, 0.671);
+    align-items: center;
+    box-shadow: 1px 1px 2px rgba(102, 51, 153, 0.671);
 }
 
 header #textLogo,
@@ -58,8 +63,6 @@ header #textLogo * {
 
 header #profil {
     width: 75%;
-    display: flex;
-    flex-direction: column;
 }
 
 #minifiedProfil,
@@ -68,10 +71,19 @@ header #profil {
 }
 
 #minifiedProfil {
-    /* display: none; */
+    display: flex;
+    flex-direction: column;
     text-align: right;
     padding-right: 5px;
     box-sizing: border-box;
+}
+
+#minifiedProfil:hover{
+    cursor: pointer;
+}
+
+#minifiedProfil:hover #hiddenOnSmallProfil{
+    display: flex;
 }
 
 #minifiedProfil * {
@@ -79,7 +91,6 @@ header #profil {
 }
 
 #minifiedProfil .name {
-    /* display: none; */
     margin-right: 5px;
     color: var(--darkViolet);
     text-decoration: underline;
@@ -88,13 +99,15 @@ header #profil {
 }
 
 #minifiedProfil img {
+    width: 33px;
+    height: 33px;
     border-width: 4px;
     border-style: double;
     border-color: var(--darkViolet);
 }
 
 #hiddenOnSmallProfil {
-    display: flex;
+    /* display: flex; */
     display: none;
     z-index: 1000;
     flex-direction: column;
@@ -108,7 +121,7 @@ header #profil {
     min-width: 200px;
     max-width: 290px;
     padding-bottom: 30px;
-    box-shadow: 3px 3px 15px rgba(102, 51, 153, 0.671);
+    box-shadow: 1px 1px 3px rgba(102, 51, 153, 0.671);
 }
 
 #hiddenOnSmallProfil .profilPic {
@@ -116,17 +129,20 @@ header #profil {
     height: 50px;
     object-fit: cover;
     object-position: 100% 10%;
+    border: none;
 }
 
 #hiddenOnSmallProfil #edit {
     margin: 5px auto 0 auto;
-    color: rgb(207, 207, 207);
     font-size: smaller;
+    color: var(--darkViolet)
 }
 
 #hiddenOnSmallProfil .name {
     font-size: 24px;
     margin-bottom: 0;
+    color: white;
+    text-decoration: none;
 }
 
 #hiddenOnSmallProfil .underName {
@@ -134,7 +150,7 @@ header #profil {
 }
 
 #hiddenOnSmallProfil #mail {
-    color: rgb(207, 207, 207);
+    color: white;
 }
 
 #hiddenOnSmallProfil::before {
@@ -155,9 +171,15 @@ header #profil {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    /* background-color: rgba(255, 255, 255, 0.514); */
 }
 
-#left, #right {
+.transpWhite{
+    background-color: rgba(255, 255, 255, 0.699);
+}
+
+#left,
+#right {
     padding: 10px;
 }
 
@@ -174,10 +196,13 @@ header #profil {
 .classe {
     padding: 11px 2vw;
     border-radius: 8px;
+    text-decoration: none;
+    color: inherit !important;
 }
 
 .classe:nth-of-type(2) {
-    color: ghostwhite;
+    border: none;
+    color: ghostwhite !important;
     background-color: var(--yellowOrange);
     box-shadow: 2px 2px 3px rgb(235, 156, 0);
     margin: auto 10px;
@@ -186,7 +211,10 @@ header #profil {
 #illustration {
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
+    margin: 20px auto 5px auto;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 15px;
 }
 
 #illustrImgContainer {
@@ -198,106 +226,67 @@ header #profil {
     width: 100%;
 }
 
-#right .right_cards .riht_card .threeimg {
+#left #details {
     display: flex;
-    padding: 20px;
+    flex-direction: column;
 }
 
-#right .right_cards .riht_card .threeimg img {
-    display: flex;
-}
-
-#left .left_cards .left_card .left_icon,
-#right .right_cards .right_card .right_icon {
-    height: 50px;
-    width: 50px;
-}
-
-#right .right_cards .right_card {
-    display: flex;
-}
-
-#right .right_cards .right_card .threeimg {
-    margin-left: 200px;
-}
-
-#right .right_cards .right_card .description {
-    margin-left: 50px;
-}
-
-#right .right_cards .right_card .threeimg img {
-    border: 2px solid ghostwhite;
-    margin-left: -30px;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-}
-
-#right .right_cards .right_card .dots {
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 15px;
-}
-
-#right .right_cards .right_card .dots div {
-    height: 5px;
-    width: 5px;
-    background-color: gray;
-    margin-bottom: 2px;
-    border-radius: 50%;
-}
-
-#right .foot p {
-    color: gray;
-}
-
-#right .foot .icons img {
-    height: 20px;
-    width: 20px;
-    margin-right: 20px;
-}
-
-#main #left #illustration {
-    margin-bottom: 50px;
-}
-
-#main #left #illustration #details a {
+#left #illustration #details a {
     color: rgb(255, 140, 0);
 }
 
-#main #left #illustration #threeDots {
-    display: flex;
-    margin-top: 10px;
+#left #illustration #threeDots {
+    order: 1;
     border-radius: 5px;
-    background-color: rgb(207, 205, 205);
-    height: 50px;
-    width: 50px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-#main #left #illustration #threeDots div {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: black;
-    margin: 2px;
+#left #text {
+    order: 2;
+    padding-left: 10px;
 }
 
-#left .left_cards{
+#left #illustration #threeDots div {
+    width: 5px;
+    height: 5px;
+    background-color: rgb(32, 107, 219);
+    margin: 4px;
+}
+
+#left #illustration #threeDots .d1 {
+    width: 20px;
+    border-radius: 10px;
+}
+
+#left #illustration #threeDots .d2 {
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+#left .left_cards {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #left .left_cards .left_card {
-    margin-bottom: 20px;
-    padding: 10px 20px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    width: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+}
+
+#left .left_cards .left_card:hover, .right_card{
+    box-shadow: 1px 1px 4px rgba(102, 51, 153, 0.671)
 }
 
 #left .left_cards .left_card .left_icon {
@@ -311,20 +300,113 @@ header #profil {
     color: var(--yellowOrange);
 }
 
+#right .right_cards .riht_card .threeimg {
+    display: flex;
+    padding: 20px;
+}
+
+#left .left_cards .left_card .left_icon,
+#right .right_cards .right_card .right_icon {
+    height: 50px;
+    width: 50px;
+}
+
+#right .right_cards {
+    padding: 20px 0;
+    position: relative;
+    border-radius: 20px;
+}
+
+#right .right_cards .right_card {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#right .right_cards .right_card:hover{
+    box-shadow: 0px 0px transparent;
+}
+
+#right .right_cards .right_card * {
+    align-self: center;
+}
+
+#right .right_cards .right_card .threeimg {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+#right .right_cards .right_card .description {
+    margin: 0;
+    padding-left: 50px;
+
+}
+
+#right .right_cards .right_card .threeimg img {
+    border: 3px solid ghostwhite;
+    margin-left: -16px;
+    border-radius: 50%;
+}
+
+#right .right_cards .right_card .dots {
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+#right .right_cards .right_card .dots div {
+    height: 5px;
+    width: 5px;
+    background-color: gray;
+    margin-bottom: 2px;
+    border-radius: 50%;
+}
+
+#right .foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#right .foot p {
+    text-align: center;
+    margin-bottom: 5px;
+    color: slategray;
+}
+
+#right .foot .icons img {
+    height: 20px;
+    width: 20px;
+}
 
 /* Small devices (portrait tablets and large phones, 550px and up) */
 @media only screen and (min-width: 550px) {
-    html {
-        /* background-color: rgba(255, 0, 0, 0.534); */
+    body{
+        background-position-y: 50vh;
     }
 
-    #left {
-        /* border: 2px solid cyan; */
+    #minifiedProfil .name {
+        display: inline;
+    }
+
+    #classification {
+        margin-left: 5%;
+        justify-content: flex-start;
     }
 
     #illustration {
         flex-direction: row;
         justify-content: center;
+        box-shadow: 1px 1px 4px rgba(102, 51, 153, 0)
     }
 
     #illustrImgContainer {
@@ -332,10 +414,10 @@ header #profil {
         align-self: flex-start;
         margin-left: 5%;
     }
-    
-    
+
+
     #details {
-        width: 30%;
+        width: 40%;
         margin-left: 20px;
         margin-right: 5%;
     }
@@ -344,15 +426,36 @@ header #profil {
         margin-top: 0;
     }
 
+    #left #illustration #threeDots {
+        order: 2;
+        width: 100%;
+        padding-bottom: 10px;
+        margin-top: auto;
+        flex-direction: column;
+    }
+
+    #left #illustration #threeDots div{
+        align-self: flex-start;
+    }
+
+    #left #illustration #threeDots .d1 {
+        width: 5px;
+        height: 20px;
+    }
+
+    #left #illustration #text{
+        order: 1;
+    }
+
     #right {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .right_cards{
+    .right_cards {
         align-self: center;
-        width: 60%;
+        width: 80%;
     }
 }
 
