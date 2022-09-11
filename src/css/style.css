@@ -503,7 +503,7 @@ header #profil {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body {
-        background-position-y: 50vh;
+        background-position-y: 55vh;
     }
 
     header {
