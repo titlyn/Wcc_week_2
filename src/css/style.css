@@ -196,10 +196,15 @@ header #profil {
 }
 
 .classe {
+    position: relative;
+    bottom: 0;
     padding: 11px 2vw;
     border-radius: 8px;
     text-decoration: none;
     color: inherit !important;
+    transition: bottom 250ms ease-in, color 250ms ease-in, background-color 250ms ease-in;
+    -o-transition: bottom 250ms ease-in, color 250ms ease-in, background-color 250ms ease-in;
+    -moz-transition: bottom 250ms ease-in, color 250ms ease-in, background-color 250ms ease-in;
 }
 
 .classe:nth-of-type(2) {
@@ -209,6 +214,14 @@ header #profil {
     box-shadow: 2px 2px 3px rgb(235, 156, 0);
     margin: auto 10px;
 }
+
+.classe:hover {
+    bottom: 10px;
+    color: rgb(235, 156, 0) !important;
+    background-color: white !important;
+    box-shadow: 2px 2px 3px rgb(235, 156, 0);
+}
+
 
 #illustration {
     display: flex;
@@ -332,7 +345,7 @@ header #profil {
     box-sizing: border-box;
     border-radius: 10px;
     position: relative;
-    transition: background-color 500ms;
+    transition: background-color 500ms ease-in-out;
 }
 
 #right .right_cards .right_card:hover,
@@ -408,7 +421,7 @@ header #profil {
     display: none;
 }
 
-#waveBackground{
+#waveBackground {
     display: none;
 }
 
@@ -500,7 +513,7 @@ header #profil {
     #main {
         flex-direction: row;
     }
-    
+
     #left,
     #right {
         width: 50%;
@@ -509,19 +522,22 @@ header #profil {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    html, body{
+
+    html,
+    body {
         height: 100%;
         min-height: 100%;
         position: relative;
     }
+
     body {
         background-image: url(../image/Wave.svg);
         background-size: contain;
-        background-position-y: 0; 
+        background-position-y: 0;
         background-position-x: 50%;
     }
 
-    #waveBackground{
+    #waveBackground {
         display: block;
         width: 100%;
         height: 100% !important;
@@ -529,18 +545,18 @@ header #profil {
         position: absolute;
     }
 
-    .transpWhite{
+    .transpWhite {
         background-color: transparent;
     }
 
-    #minifiedProfil{
+    #minifiedProfil {
         display: none;
     }
 
-    #right{
+    #right {
         position: relative;
-            bottom: 120px;
-            right: 4%;
+        bottom: 120px;
+        right: 4%;
     }
 
     #onlyOnLargeProfil {
@@ -589,16 +605,21 @@ header #profil {
         color: slategrey;
     }
 
-    #right .right_cards{
+    #right .right_cards {
         /* border: 2px solid red; */
         align-self: flex-end !important;
     }
 
-    #right .right_cards .right_card{
+    #right .right_cards .right_card {
         box-shadow: none;
     }
 
-    .foot{
+    .left_card {
+        width: 30%;
+        max-width: 160px;
+    }
+
+    .foot {
         width: 80%;
         margin-left: auto;
         padding: 15px;
@@ -606,7 +627,7 @@ header #profil {
         margin-top: 10px !important;
     }
 
-    .foot .icons{
+    .foot .icons {
         margin-left: auto;
 
         align-self: flex-end;
