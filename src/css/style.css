@@ -1,6 +1,6 @@
 :root {
     --darkViolet: rgb(42, 32, 78);
-    --dark: rgb(66, 31, 194);
+    --dark: rgb(62, 31, 139);
     --yellowOrange: rgb(255, 176, 7);
 }
 
@@ -35,16 +35,18 @@ body {
 }
 
 header {
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    box-shadow: 1px 1px 2px rgba(102, 51, 153, 0.671);
+    /* box-shadow: 1px 1px 2px rgba(102, 51, 153, 0.671); */
 }
 
 header #textLogo,
 #profil {
     height: 40px;
+    box-sizing: border-box;
+    margin: auto 2%;
 }
 
 header #textLogo {
@@ -78,11 +80,11 @@ header #profil {
     box-sizing: border-box;
 }
 
-#minifiedProfil:hover{
+#minifiedProfil:hover {
     cursor: pointer;
 }
 
-#minifiedProfil:hover #hiddenOnSmallProfil{
+#minifiedProfil:hover #hiddenOnSmallProfil {
     display: flex;
 }
 
@@ -135,7 +137,7 @@ header #profil {
 #hiddenOnSmallProfil #edit {
     margin: 5px auto 0 auto;
     font-size: smaller;
-    color: var(--darkViolet)
+    color: rgb(197, 197, 197);
 }
 
 #hiddenOnSmallProfil .name {
@@ -174,7 +176,7 @@ header #profil {
     /* background-color: rgba(255, 255, 255, 0.514); */
 }
 
-.transpWhite{
+.transpWhite {
     background-color: rgba(255, 255, 255, 0.699);
 }
 
@@ -274,9 +276,10 @@ header #profil {
 }
 
 #left .left_cards .left_card {
-    margin-bottom: 10px;
+    margin: auto 10px 10px 10px;
     padding: 5px 15px;
-    width: 150px;
+    width: 30%;
+    min-width: 100px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -285,8 +288,9 @@ header #profil {
     border-radius: 5px;
 }
 
-#left .left_cards .left_card:hover, .right_card{
-    box-shadow: 1px 1px 4px rgba(102, 51, 153, 0.671)
+#left .left_cards .left_card:hover,
+.right_card {
+    box-shadow: 2px 2px 6px rgba(102, 51, 153, 0.671)
 }
 
 #left .left_cards .left_card .left_icon {
@@ -315,6 +319,7 @@ header #profil {
     padding: 20px 0;
     position: relative;
     border-radius: 20px;
+
 }
 
 #right .right_cards .right_card {
@@ -326,10 +331,20 @@ header #profil {
     padding: 15px;
     box-sizing: border-box;
     border-radius: 10px;
+    position: relative;
+    transition: background-color 500ms;
 }
 
-#right .right_cards .right_card:hover{
-    box-shadow: 0px 0px transparent;
+#right .right_cards .right_card:hover,
+#right .right_cards .right_card:active {
+    background-color: rgb(62, 31, 139);
+    box-shadow: 2px 5px 3px rgba(46, 11, 174, 0.5);
+    color: white;
+}
+
+#right .right_cards .right_card:hover .dots div,
+#right .right_cards .right_card:active .dots div {
+    background-color: white;
 }
 
 #right .right_cards .right_card * {
@@ -339,6 +354,7 @@ header #profil {
 #right .right_cards .right_card .threeimg {
     width: 40%;
     display: flex;
+    margin-left: auto;
     flex-direction: row;
     justify-content: right;
 }
@@ -358,7 +374,7 @@ header #profil {
 #right .right_cards .right_card .dots {
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    margin-left: auto;
 }
 
 
@@ -388,19 +404,31 @@ header #profil {
     width: 20px;
 }
 
+#onlyOnLargeProfil {
+    display: none;
+}
+
+#waveBackground{
+    display: none;
+}
+
 /* Small devices (portrait tablets and large phones, 550px and up) */
 @media only screen and (min-width: 550px) {
-    body{
-        background-position-y: 50vh;
+    body {
+        background-position-y: 65vh;
     }
 
     #minifiedProfil .name {
         display: inline;
     }
 
+    header {
+        margin-bottom: 50px;
+    }
+
     #classification {
         margin-left: 5%;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     #illustration {
@@ -434,7 +462,7 @@ header #profil {
         flex-direction: column;
     }
 
-    #left #illustration #threeDots div{
+    #left #illustration #threeDots div {
         align-self: flex-start;
     }
 
@@ -443,7 +471,7 @@ header #profil {
         height: 20px;
     }
 
-    #left #illustration #text{
+    #left #illustration #text {
         order: 1;
     }
 
@@ -461,13 +489,126 @@ header #profil {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    html {
-        background-color: rgba(0, 255, 98, 0.534);
+    body {
+        background-position-y: 50vh;
+    }
+
+    header {
+        box-shadow: 0px 0px transparent;
+    }
+
+    #main {
+        flex-direction: row;
+    }
+    
+    #left,
+    #right {
+        width: 50%;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    html, body{
+        height: 100%;
+        min-height: 100%;
+        position: relative;
+    }
+    body {
+        background-image: url(../image/Wave.svg);
+        background-size: contain;
+        background-position-y: 0; 
+        background-position-x: 50%;
+    }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+    #waveBackground{
+        display: block;
+        width: 100%;
+        height: 100% !important;
+        min-height: 100% !important;
+        position: absolute;
+    }
+
+    .transpWhite{
+        background-color: transparent;
+    }
+
+    #minifiedProfil{
+        display: none;
+    }
+
+    #right{
+        position: relative;
+            bottom: 120px;
+            right: 4%;
+    }
+
+    #onlyOnLargeProfil {
+        display: flex;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: transparent;
+        align-self: flex-end;
+        margin-top: 10px;
+        width: 50%;
+        min-width: 200px;
+        max-width: 290px;
+        padding-bottom: 30px;
+        /* border: 2px solid red; */
+    }
+
+    #onlyOnLargeProfil .profilPic {
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: 100% 10%;
+        border: none;
+    }
+
+    #onlyOnLargeProfil #edit {
+        margin: 5px auto 0 auto;
+        font-size: smaller;
+        color: rgb(81, 57, 168);
+    }
+
+    #onlyOnLargeProfil .name {
+        font-size: 24px;
+        margin-bottom: 0;
+        color: var(--darkViolet);
+        text-decoration: none;
+    }
+
+    #onlyOnLargeProfil .underName {
+        margin: 8px auto 0 auto;
+    }
+
+    #onlyOnLargeProfil #mail {
+        color: slategrey;
+    }
+
+    #right .right_cards{
+        /* border: 2px solid red; */
+        align-self: flex-end !important;
+    }
+
+    #right .right_cards .right_card{
+        box-shadow: none;
+    }
+
+    .foot{
+        width: 80%;
+        margin-left: auto;
+        padding: 15px;
+        flex-direction: row !important;
+        margin-top: 10px !important;
+    }
+
+    .foot .icons{
+        margin-left: auto;
+
+        align-self: flex-end;
+    }
+}
