@@ -571,7 +571,7 @@ footer .icons img {
         background-repeat: no-repeat;
         background-image: url(../image/waveback.svg);
         background-size: cover;
-        background-position-y: 45vh;
+        background-position-y: -60%;
         background-position-x: 50%;
     }
 }
