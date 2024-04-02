@@ -2,20 +2,24 @@
     --darkViolet: rgb(42, 32, 78);
     --dark: rgb(62, 31, 139);
     --yellowOrange: rgb(255, 176, 7);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--darkViolet);
 }
 
-body {
-    color: var(--darkViolet);
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+}
 
-    background: url(../image/waveback.svg) no-repeat;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
+html, body{
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 100lvh;
+    overflow: hidden auto;
 }
 
 .bold {
@@ -173,7 +177,6 @@ header #profil {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    /* background-color: rgba(255, 255, 255, 0.514); */
 }
 
 .transpWhite {
@@ -183,6 +186,10 @@ header #profil {
 #left,
 #right {
     padding: 10px;
+}
+
+#right{
+    padding-bottom: 0;
 }
 
 #left .left_cards {
@@ -263,6 +270,10 @@ header #profil {
 #left #text {
     order: 2;
     padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
 }
 
 #left #illustration #threeDots div {
@@ -292,18 +303,28 @@ header #profil {
     margin: auto 10px 10px 10px;
     padding: 5px 15px;
     width: 30%;
-    min-width: 100px;
+    min-width: 150px;
     height: 200px;
+    border-radius: 5px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    text-align: center;
+
+    /* flex: 0 1; */
 }
 
 #left .left_cards .left_card:hover,
 .right_card {
     box-shadow: 2px 2px 6px rgba(102, 51, 153, 0.671)
+}
+
+.left_card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #left .left_cards .left_card .left_icon {
@@ -329,10 +350,13 @@ header #profil {
 }
 
 #right .right_cards {
-    padding: 20px 0;
+    padding: 20px 10px 0 10px;
     position: relative;
     border-radius: 20px;
 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #right .right_cards .right_card {
@@ -399,31 +423,42 @@ header #profil {
     border-radius: 50%;
 }
 
-#right .foot {
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+
+    position: relative;
+    color: white;
 }
 
-#right .foot p {
+footer #mobilWave{
+    z-index: -1;
+
+    position: absolute;
+    bottom: -80%;
+
+    width: 100vw;
+    height: auto;
+}
+
+footer p {
     text-align: center;
     margin-bottom: 5px;
     color: slategray;
 }
 
-#right .foot .icons img {
+footer .icons img {
     height: 20px;
     width: 20px;
+    /* border: 2px solid red; */
 }
 
 #onlyOnLargeProfil {
     display: none;
 }
 
-#waveBackground {
-    display: none;
-}
 
 /* Small devices (portrait tablets and large phones, 550px and up) */
 @media only screen and (min-width: 550px) {
@@ -502,10 +537,6 @@ header #profil {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    body {
-        background-position-y: 65vh;
-    }
-
     header {
         box-shadow: 0px 0px transparent;
     }
@@ -518,11 +549,22 @@ header #profil {
     #right {
         width: 50%;
     }
+
+    footer #mobilWave{
+        display: none;
+    }
+
+    body {
+        background-repeat: no-repeat;
+        background-image: url(../image/waveback.svg);
+        background-size: cover;
+        background-position-y: 45vh;
+        background-position-x: 50%;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
     html,
     body {
         height: 100%;
@@ -531,18 +573,12 @@ header #profil {
     }
 
     body {
+        background-position-y: 65vh;
+        background-repeat: no-repeat;
         background-image: url(../image/Wave.svg);
         background-size: contain;
         background-position-y: 0;
         background-position-x: 50%;
-    }
-
-    #waveBackground {
-        display: block;
-        width: 100%;
-        height: 100% !important;
-        min-height: 100% !important;
-        position: absolute;
     }
 
     .transpWhite {
@@ -557,6 +593,8 @@ header #profil {
         position: relative;
         bottom: 120px;
         right: 4%;
+
+        /* margin-top: -120px; */
     }
 
     #onlyOnLargeProfil {
@@ -572,7 +610,6 @@ header #profil {
         min-width: 200px;
         max-width: 290px;
         padding-bottom: 30px;
-        /* border: 2px solid red; */
     }
 
     #onlyOnLargeProfil .profilPic {
@@ -619,7 +656,7 @@ header #profil {
         max-width: 160px;
     }
 
-    .foot {
+    footer {
         width: 80%;
         margin-left: auto;
         padding: 15px;
@@ -627,9 +664,13 @@ header #profil {
         margin-top: 10px !important;
     }
 
-    .foot .icons {
+    footer .icons {
         margin-left: auto;
 
         align-self: flex-end;
+    }
+
+    footer #mobilWave{
+        display: none;
     }
 }
