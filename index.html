@@ -8,17 +8,74 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <header>
-        <div id="textLogo">
-            <h1>Wingle</h1>
-        </div>
-        <div id="profil">
-            <div id="minifiedProfil">
-                <div>
-                    <span class="name bold">Helena Brauer</span>
-                    <img src="src/image/woman-g4c3acef31_640.jpg" class="rounded" alt="A woman's profile picture">
+    <div id="landing-container">
+        <header>
+            <div id="textLogo">
+                <h1>Wingle</h1>
+            </div>
+            <div id="profil">
+                <div id="minifiedProfil">
+                    <div>
+                        <span class="name bold">Helena Brauer</span>
+                        <img src="src/image/woman-g4c3acef31_640.jpg" class="rounded" alt="A woman's profile picture">
+                    </div>
+                    <div id="hiddenOnSmallProfil" class="profil">
+                        <div id="imgContainer">
+                            <img src="src/image/woman-g4c3acef31_640.jpg" class="rounded profilPic" alt="A woman's profile picture">
+                            <p id="edit" class="bold">edit</p>
+                        </div>
+        
+                        <p class="name bold">Helena Brauer</p>
+                        <p class="underName bold" id="manager">Manager</p>
+                        <p class="underName" id="mail">helena@Brauer.com</p>
+                    </div>
                 </div>
-                <div id="hiddenOnSmallProfil" class="profil">
+            </div>
+        </header>
+    
+        <div id="main">
+            <div id="left">
+                <div id="classification">
+                    <a href="#" class="classe">Popular</a>
+                    <a href="#" class="classe">Recommended</a>
+                    <a href="#" class="classe">Extreme</a>
+                </div>
+    
+                <div id="illustration" class="transpWhite">
+                    <div id="illustrImgContainer">
+                        <img src="src/image/camp.png" alt="Cabanne">
+                    </div>
+    
+                    <div id="details">
+                        <div id="text">
+                            <h2>Bonne Ance</h2>
+                            <a href="">More details</a>
+                        </div>
+                        <div id="threeDots">
+                            <div class="d1"></div>
+                            <div class="d2"></div>
+                            <div class="d2"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="left_cards">
+                    <div class="left_card transpWhite">
+                        <img src="./src/image/compass.svg" alt="compass" class="left_icon">
+                        <p>Camping guide</p>
+                        <a href="#">More details</a>
+                    </div>
+    
+                    <div class="left_card transpWhite">
+                        <img src="./src/image/map.svg" alt="compass" class="left_icon">
+                        <p>Dangerous hikes</p>
+                        <a href="#">More details</a>
+                    </div>
+    
+                </div>
+            </div>
+            <div id="right">
+                <div id="onlyOnLargeProfil">
                     <div id="imgContainer">
                         <img src="src/image/woman-g4c3acef31_640.jpg" class="rounded profilPic" alt="A woman's profile picture">
                         <p id="edit" class="bold">edit</p>
@@ -28,120 +85,66 @@
                     <p class="underName bold" id="manager">Manager</p>
                     <p class="underName" id="mail">helena@Brauer.com</p>
                 </div>
+    
+                <div class="right_cards">
+                    <div class="right_card transpWhite">
+                        <img src="./src/image/snorkeling.svg" alt="compass" class="right_icon">
+                        <p class="description">36 hours <br> Snorkeling</p>
+                        <div class="threeimg">
+                            <img src="./src/image/man-g3c16e4c0f_640.jpg" class="rounded minifiedPic" alt="">
+                            <img src="./src/image/man-gfc63a375e_640.jpg" class="rounded minifiedPic" alt="">
+                            <img src="./src/image/woman-g4c3acef31_640.jpg" class="rounded minifiedPic" alt="">
+                        </div>
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+    
+                    <div class="right_card transpWhite">
+                        <img src="./src/image/Hilking.svg" alt="compass" class="right_icon">
+                        <p class="description">64 hours <br> Hiking</p>
+                        <div class="threeimg">
+                            <img src="./src/image/man-g3c16e4c0f_640.jpg" class="rounded minifiedPic" alt="">
+                            <img src="./src/image/man-gfc63a375e_640.jpg" class="rounded minifiedPic" alt="">
+                        </div>
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+    
+                    <div class="right_card transpWhite">
+                        <img src="./src/image/kayaking.svg" alt="compass" class="right_icon">
+                        <p class="description">42 hours <br> Kayaking</p>
+                        <div class="threeimg">
+                            <img src="./src/image/man-g3c16e4c0f_640.jpg" class="rounded minifiedPic" alt="">
+                            <img src="./src/image/man-gfc63a375e_640.jpg" class="rounded minifiedPic" alt="">
+                            <img src="./src/image/woman-g4c3acef31_640.jpg" class="rounded minifiedPic" alt="">
+                        </div>
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <footer>
+                    <img id="mobilWave" src="./src/image/waveback.svg" alt="wave background">
+                    <p>Greenwich Street New York, NY 10007</p>
+                    <div class="icons">
+                        <img src="./src/image/facebook-f.svg" alt="Facebook">
+                        <img src="./src/image/linkedin_2.svg" alt="LinkedIn">
+                        <img src="./src/image/twitter.svg" alt="Twiter">
+                    </div>
+                </footer>
             </div>
-        </div>
-    </header>
-
-    <div id="main">
-        <div id="left">
-            <div id="classification">
-                <a href="#" class="classe">Popular</a>
-                <a href="#" class="classe">Recommended</a>
-                <a href="#" class="classe">Extreme</a>
-            </div>
-
-            <div id="illustration" class="transpWhite">
-                <div id="illustrImgContainer">
-                    <img src="src/image/camp.png" alt="Cabanne">
-                </div>
-
-                <div id="details">
-                    <div id="text">
-                        <h2>Bonne Ance</h2>
-                        <a href="">More details</a>
-                    </div>
-                    <div id="threeDots">
-                        <div class="d1"></div>
-                        <div class="d2"></div>
-                        <div class="d2"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="left_cards">
-                <div class="left_card transpWhite">
-                    <img src="./src/image/compass.svg" alt="compass" class="left_icon">
-                    <p>Camping guide</p>
-                    <a href="#">More details</a>
-                </div>
-
-                <div class="left_card transpWhite">
-                    <img src="./src/image/map.svg" alt="compass" class="left_icon">
-                    <p>Dangerous hikes</p>
-                    <a href="#">More details</a>
-                </div>
-
-            </div>
-        </div>
-        <div id="right">
-            <div id="onlyOnLargeProfil">
-                <div id="imgContainer">
-                    <img src="src/image/woman-g4c3acef31_640.jpg" class="rounded profilPic" alt="A woman's profile picture">
-                    <p id="edit" class="bold">edit</p>
-                </div>
-
-                <p class="name bold">Helena Brauer</p>
-                <p class="underName bold" id="manager">Manager</p>
-                <p class="underName" id="mail">helena@Brauer.com</p>
-            </div>
-            
-            <div class="right_cards">
-                <div class="right_card transpWhite">
-                    <img src="./src/image/snorkeling.svg" alt="compass" class="right_icon">
-                    <p class="description">36 hours <br> Snorkeling</p>
-                    <div class="threeimg">
-                        <img src="./src/image/man-g3c16e4c0f_640.jpg" class="rounded minifiedPic" alt="">
-                        <img src="./src/image/man-gfc63a375e_640.jpg" class="rounded minifiedPic" alt="">
-                        <img src="./src/image/woman-g4c3acef31_640.jpg" class="rounded minifiedPic" alt="">
-                    </div>
-                    <div class="dots">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-
-                <div class="right_card transpWhite">
-                    <img src="./src/image/Hilking.svg" alt="compass" class="right_icon">
-                    <p class="description">64 hours <br> Hiking</p>
-                    <div class="threeimg">
-                        <img src="./src/image/man-g3c16e4c0f_640.jpg" class="rounded minifiedPic" alt="">
-                        <img src="./src/image/man-gfc63a375e_640.jpg" class="rounded minifiedPic" alt="">
-                    </div>
-                    <div class="dots">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-
-                <div class="right_card transpWhite">
-                    <img src="./src/image/kayaking.svg" alt="compass" class="right_icon">
-                    <p class="description">42 hours <br> Kayaking</p>
-                    <div class="threeimg">
-                        <img src="./src/image/man-g3c16e4c0f_640.jpg" class="rounded minifiedPic" alt="">
-                        <img src="./src/image/man-gfc63a375e_640.jpg" class="rounded minifiedPic" alt="">
-                        <img src="./src/image/woman-g4c3acef31_640.jpg" class="rounded minifiedPic" alt="">
-                    </div>
-                    <div class="dots">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-
-            <footer>
-                <img id="mobilWave" src="./src/image/waveback.svg" alt="wave background">
-                <p>Greenwich Street New York, NY 10007</p>
-                <div class="icons">
-                    <img src="./src/image/facebook-f.svg" alt="Facebook">
-                    <img src="./src/image/linkedin_2.svg" alt="LinkedIn">
-                    <img src="./src/image/twitter.svg" alt="Twiter">
-                </div>
-            </footer>
         </div>
     </div>
+
 
 
     <!-- <div id="waveBackground">
